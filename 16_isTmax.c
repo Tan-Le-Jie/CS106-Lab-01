@@ -9,7 +9,7 @@
  */
 int isTmax(int x)
 {
-    return 2;
+    return !(2147483647^x);
 }
 
 int test_isTmax(int x)
@@ -20,6 +20,6 @@ int test_isTmax(int x)
 int main(void)
 {
     int x = 0;
-    printf("expected: %x\n", isTmax(x));
+    printf("expected: %d\n", isTmax(x));
     printf("actual  : %x\n", test_isTmax(x));
 }

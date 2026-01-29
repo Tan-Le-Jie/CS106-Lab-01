@@ -10,7 +10,9 @@
  */
 int fitsShort(int x)
 {
-    return 2;
+    return !((x >> 15) ^(x >> 16));
+
+     
 }
 
 int test_fitsShort(int x)
